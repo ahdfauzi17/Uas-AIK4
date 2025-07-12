@@ -1,0 +1,233 @@
+/* ========== GLOBAL / DEFAULT STYLES ========== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom, #f3f6f4, #dbe8df);
+    background-image: url('https://images.unsplash.com/photo-1617727553255-19b8d450098d?auto=format&fit=crop&w=1400&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #222;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #224d3b, #2ca36a);
+    padding: 12px 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.logo {
+    font-size: 22px;
+    color: white;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffeb3b;
+}
+
+.nav-links li a.active {
+    color: #ffc107;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* ========== KONTEN HALAMAN ========== */
+.container {
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-top: 30px;
+}
+
+h1, h2 {
+    color: #2d392f;
+    text-align: center;
+}
+
+.gerakan-buttons-container {
+    margin-top: 20px;
+}
+
+.accordion {
+    background-color: #a6dba8;
+    color: #1c2f21;
+    cursor: pointer;
+    padding: 14px 18px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion:hover,
+.accordion.active {
+    background-color: #89c68c;
+    color: white;
+}
+
+.panel {
+    background-color: #f0fdf3;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 18px;
+    border-radius: 0 0 8px 8px;
+    font-size: 15px;
+}
+
+.panel p {
+    padding: 10px 0;
+    margin: 0;
+    color: #2c4e3d;
+    font-size: 15px;
+}
+
+/* ========== STYLING UNTUK HALAMAN INDEX SAJA ========== */
+.index-body {
+    margin: 0;
+    padding: 0;
+    background-color: #d7fdd1;
+    font-family: 'Georgia', serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.index-container {
+    margin-top: 60px;
+}
+
+.index-icon {
+    font-size: 80px;
+    color: #3d5b47;
+    margin-bottom: 20px;
+}
+
+.index-title {
+    font-size: 36px;
+    margin: 10px 0;
+    color: #2d392f;
+}
+
+.index-desc {
+    font-size: 14px;
+    color: #333;
+    margin: 20px;
+}
+
+.index-button {
+    background-color: #a6dba8;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #1c2f21;
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.index-button:hover {
+    background-color: #89c68c;
+}
+
+.index-footer {
+    background-color: #a6dba8;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    color: #1c2f21;
+    text-align: center;
+}
+
+/* ========== TOMBOL KEMBALI (untuk halaman isi) ========== */
+.back-button {
+    display: inline-block;
+    margin-top: 40px;
+    background-color: #a6dba8;
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #1c2f21;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #8bbb8f;
+}
+
+blockquote {
+    background-color: #eef8f0;
+    border-left: 5px solid #56a06d;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #2c4e3d;
+    border-radius: 8px;
+}
+
+/* ========== ANIMASI GERAKAN ========== */
+.animasi-gerakan {
+    text-align: center;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.animasi-gerakan img {
+    width: 200px;
+    max-width: 90%;
+    animation: fadeInGerakan 1s ease-in-out forwards;
+}
+
+@keyframes fadeInGerakan {
+    0% { transform: scale(0.8) translateY(20px); opacity: 0; }
+    100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+.animasi-gerakan .caption {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #2d392f;
+}
